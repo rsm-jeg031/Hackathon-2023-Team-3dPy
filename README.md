@@ -2,7 +2,7 @@
 
 ## Overview 📝
 
-This repository contains the work of Team 3dPy, for the Sony PlayStation Hackathon. Our project focuses on performing sentiment analysis on PlayStation blog posts and social media content surrounding game launches. The data used in this project is publicly available and generally complies with all relevant web scraping guidelines and robots.txt files. 
+This repository contains the work of Team 3dPy, for the Sony PlayStation Hackathon. Our project focuses on performing sentiment analysis on PlayStation blog posts and social media content surrounding game launches. The data used in this project is publicly available and generally complies with all relevant web scraping guidelines and robots.txt files. Also, this was fun 😄. Not breaking any laws here 🚓
 
 ### Project Objective 🎯
 
@@ -64,6 +64,6 @@ The data for this project was collected from the following sources:
 
 ## Disclaimer 📜
 
-This project is created for learning and demonstration purposes only around the Sony PlayStation Hackathon. It is not intended for commercial use. All data used in this project is publicly available and does not include any proprietary Sony PlayStation data. The data are limited to the last 12 months, 2022-2023.
+This project is created for learning and demonstration purposes only around friendly Hackathon. It is not intended for commercial use. All data used in this project is publicly available and does not include any proprietary Sony PlayStation data. The data are limited to the last 12 months, 2022-2023.
 
 ---
