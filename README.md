@@ -13,10 +13,10 @@ To conduct a word bubble sentiment analysis of public posts and comments from va
 The data for this project was collected from the following sources:
 
 - PlayStation Blog 🟢
-- Twitter 🟡
-- Facebook 🟡
-- Reddit 🟡
-- Instagram 🟡
+- Twitter 🔴 
+- Facebook 🔴
+- Reddit 🟢
+- Instagram 🔴
 - Metacritic 🟢
 - IGN 🟡
 - Gamespot 🟡
