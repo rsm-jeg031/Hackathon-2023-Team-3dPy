@@ -13,13 +13,13 @@ To conduct a word bubble sentiment analysis of public posts and comments from va
 The data for this project was collected from the following sources:
 
 - PlayStation Blog 🟢
-- Twitter 🔴 
-- Facebook 🔴
 - Reddit 🟢
-- Instagram 🔴
 - Metacritic 🟢
-- IGN 🟡
-- Gamespot 🟡
+- IGN 🟢
+- Twitter 🔴 Doesn't allow scraping in txt file - and API is too expensive 🙃 may remove
+- Facebook 🔴 Doesn't allow scraping in txt file - and API is too expensive 🙃 may remove
+- Instagram 🔴 Doesn't allow scraping in txt file - and API is too expensive 🙃 may remove
+- YouTube 🔴 Doesn't allow scraping in txt file - and API is too expensive 🙃 may remove
 
 
 **Notes:** *We didn't have funds to pay larger social medial sites thousands of dollars for a developer account to use their APIs, so we only went back 1 calendar year, to not scrape too much of their data. We wanted to respect their data collection, while still being able to enjoy the challenge of a good ol' Hackathon.*
