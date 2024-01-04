@@ -16,10 +16,6 @@ The data for this project was collected from the following sources:
 - Reddit 🟢
 - Metacritic 🟢
 - IGN 🟢
-- Twitter 🔴 Doesn't allow scraping in txt file - and API is too expensive 🙃 may remove
-- Facebook 🔴 Doesn't allow scraping in txt file - and API is too expensive 🙃 may remove
-- Instagram 🔴 Doesn't allow scraping in txt file - and API is too expensive 🙃 may remove
-- YouTube 🔴 Doesn't allow scraping in txt file - and API is too expensive 🙃 may remove
 
 
 **Notes:** *We didn't have funds to pay larger social medial sites thousands of dollars for a developer account to use their APIs, so we only went back 1 calendar year, to not scrape too much of their data. We wanted to respect their data collection, while still being able to enjoy the challenge of a good ol' Hackathon.*
@@ -64,6 +60,6 @@ The data for this project was collected from the following sources:
 
 ## Disclaimer 📜
 
-This project is created for learning and demonstration purposes only around friendly Hackathon. It is not intended for commercial use. All data used in this project is publicly available and does not include any proprietary Sony PlayStation data. The data are limited to the last 12 months, 2022-2023.
+This project is for learning and demonstration purposes only around a friendly Hackathon. It is not intended for commercial use. All data used in this project is publicly available and does not include any proprietary Sony PlayStation data. The data are limited to the last 12 months, 2022-2023.
 
 ---
