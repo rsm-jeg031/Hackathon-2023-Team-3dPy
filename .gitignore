@@ -1,2 +1,8 @@
 Scripts/Python/.env
 Scripts/Scrapers & Spiders/.env
+Scripts/Natural Language Processing /Text Analysis/corpus_summary--Hansens_Example.ipynb
+Scripts/Natural Language Processing /Text Analysis/drugs--Hansens_Example.ipynb
+Scripts/Natural Language Processing /Text Analysis/sentiments--Hansens_Example.ipynb
+Scripts/Natural Language Processing /Topic Modeling/ldaGensim--Hansens_Example.ipynb
+Scripts/Natural Language Processing /Topic Modeling/numpyroSales--Hansens_Example.ipynb
+Scripts/Natural Language Processing /Topic Modeling/numpyroUber--Hansens_Example.ipynb
