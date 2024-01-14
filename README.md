@@ -29,31 +29,18 @@ The data for this project was collected from the following sources:
 - `Documentation`: Provides detailed documentation of the methodologies and tools used.
 - `Visualizations`: Contains interactive visualizations created using D3.js.
 
-## How to Use 📝   --Work in Progress--  🔴
-
-1. **Set up Environment**: Follow the instructions in `setup.md` to set up your environment.
-2. **Run Scripts**: Use the scripts in the `Scripts` folder to scrape and process the data.
-3. **Data Exploration**: Explore the datasets in the `Data` folder.
-4. **Visualization**: Check out the `Visualizations` folder for interactive sentiment analysis visualizations.
-
-## Contributions 🤝
-
-- **Jesus**: Technical Program Management, Scrum Mastering, Data Collection Coordination.
-- **Ahmed**: Analytics Engineering, Data Processing, Visualization Development.
-
 ## Libraries and Tools Used 📚 🧰
 
-- **Beautiful Soup**: Web scraping library for Python.
-- **Selenium**: Web scraping library for Python.
-- **Pandas**: Data processing library for Python.
-- **Time**: Python library for time management.
-- **Requests**: Python library for HTTP requests.
-- **NLTK**: Natural language processing library for Python.
-- **D3.js**: JavaScript library for data visualization.
-- **Domo**: Business intelligence and data visualization platform.
+- **Beautiful Soup**
+- **Selenium**
+- **Pandas**
+- **Requests**
+- **NLTK**
+- **D3.js**
+- **Domo**
+- *various other Python libraries*
 
-
-## Contact 📞
+## Contributions 🤝
 
 - Jesus [LinkedIn Profile](https://www.linkedin.com/in/jesusgonzalez10/)
 - Ahmed [LinkedIn Profile](https://www.linkedin.com/in/ahmedraza4/)
