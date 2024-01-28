@@ -1,4 +1,4 @@
-# 🫧 Word Bubble 🫧 Sentiment Analysis Project 📈 - Team 3dPy 🎮
+# 🫧 Sentiment Analysis Project 📈 - Team 3dPy 🎮
 
 ## Overview 📝
 
@@ -21,13 +21,6 @@ The data for this project was collected from the following sources:
 **Notes:** *We didn't have funds to pay larger social medial sites thousands of dollars for a developer account to use their APIs, so we only went back 1 calendar year, to not scrape too much of their data. We wanted to respect their data collection, while still being able to enjoy the challenge of a good ol' Hackathon.*
 
 *We also batched the requests to not overload any services... we're nice like that. Plus, we are only talking about > 100 mbs of data, so it's not like we are scraping the entire internet.* 😉
-
-## Repository Structure 📁
-
-- `Data`: Contains the raw data pulls and processed datasets.
-- `Scripts`: Includes all scripts used for data scraping and processing.
-- `Documentation`: Provides detailed documentation of the methodologies and tools used.
-- `Visualizations`: Contains interactive visualizations created using D3.js.
 
 ## Libraries and Tools Used 📚 🧰
 
