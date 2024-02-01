@@ -45,4 +45,4 @@ def search_analysis(request):
         uri = urllib.parse.quote(string)
         return render(request, 'search_results.html', {'data': uri})
 
-    return render(request, 'search.html')
+    return render(request, 'search_results.html')
