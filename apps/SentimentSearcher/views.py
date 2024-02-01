@@ -30,7 +30,7 @@ def search_analysis(request):
         filtered_data = vader_scores_over_time[
             (vader_scores_over_time['YearMonth'] >= '2022-10') & 
             (vader_scores_over_time['YearMonth'] <= '2024-02')]
-        plt.figure(figsize=(5, 3))
+        plt.figure(figsize=(7, 4))
         sns.lineplot(x='YearMonth', y='value', hue='Vader_Score', data=filtered_data.melt(id_vars='YearMonth'))
         plt.title('Total Vader Scores Over Time (Oct 2022 - Jan 2024)')
         plt.xlabel('Time (Year and Month)')
@@ -38,6 +38,7 @@ def search_analysis(request):
         plt.xticks(rotation=45)
         plt.legend(title='Vader Score')
         plt.grid(True)
+        plt.tight_layout()
         
         # PLOT 1 BUFFER ---------------------
         buf1 = io.BytesIO()
@@ -52,7 +53,7 @@ def search_analysis(request):
         vader_scores_over_time2 = df_filtered.groupby(['YearMonth', 'Vader_Score']).size().unstack(fill_value=0)
         vader_scores_over_time2 = vader_scores_over_time2.reset_index()
         vader_scores_over_time2['YearMonth'] = vader_scores_over_time2['YearMonth'].dt.to_timestamp()
-        plt.figure(figsize=(5, 3))
+        plt.figure(figsize=(7, 4))
         sns.lineplot(x='YearMonth', y='value', hue='Vader_Score', data=vader_scores_over_time2.melt(id_vars='YearMonth'))
         plt.title(f'Sentiment for: --{search_query}--')
         plt.xlabel('Time (Year and Month)')
@@ -60,11 +61,7 @@ def search_analysis(request):
         plt.xticks(rotation=45)
         plt.legend(title='Vader Score')
         plt.grid(True)
-        #temp_total_comments = vader_scores_over_time2["Negative"].sum() + vader_scores_over_time2["Positive"].sum() + vader_scores_over_time2["Neutral"].sum()
-        #print(f'Total comments: {temp_total_comments}')
-        #print(f'Total Negative comments: {vader_scores_over_time2["Negative"].sum()}')
-        #print(f'Total Positive comments: {vader_scores_over_time2["Positive"].sum()}')
-        #print(f'Total Neutral comments: {vader_scores_over_time2["Neutral"].sum()}')
+        plt.tight_layout()     
 
         # PLOT 2 BUFFER ---------------------
         buf2 = io.BytesIO()
@@ -74,7 +71,7 @@ def search_analysis(request):
         uri2 = urllib.parse.quote(string2)
         plt.clf()
         
-        # PLOT 3 ---------------------
+        # PLOT 2a ---------------------
         def generate_wordcloud(sentiment, color, axs):
             comments = df_filtered[df_filtered['Vader_Score'] == sentiment]['Comment']
             comments = ' '.join(str(comment) for comment in comments)
@@ -86,11 +83,31 @@ def search_analysis(request):
             axs.imshow(wordcloud, interpolation='bilinear')
             axs.set_title(f'{sentiment.capitalize()} Sentiment', fontsize=16)
             axs.axis('off')
-        fig, axs = plt.subplots(1, 3, figsize=(14, 4))
+        fig, axs = plt.subplots(1, 3, figsize=(15, 4))
         generate_wordcloud('Positive', 'Greens', axs[0])
         generate_wordcloud('Neutral', 'Blues', axs[1])
         generate_wordcloud('Negative', 'Reds', axs[2])
         plt.tight_layout()
+        
+        # PLOT 2a BUFFER ---------------------
+        buf2a = io.BytesIO()
+        plt.savefig(buf2a, format='png')
+        buf2a.seek(0)
+        string2a = base64.b64encode(buf2a.read())
+        uri2a = urllib.parse.quote(string2a)
+        plt.clf()        
+        
+        # PLOT 3 ---------------------
+        temp_total_comments = vader_scores_over_time2["Negative"].sum() + vader_scores_over_time2["Positive"].sum() + vader_scores_over_time2["Neutral"].sum()
+        total_comments_text = f"""Total comments for {search_query} query: {temp_total_comments}
+        -------------------------------------------------
+        — : Total Negative comments: {vader_scores_over_time2["Negative"].sum()}
+        + : Total Positive comments: {vader_scores_over_time2["Positive"].sum()}
+        O : Total Neutral comments: {vader_scores_over_time2["Neutral"].sum()}"""
+        fig, ax = plt.subplots(figsize=(8, 2)) 
+        ax.text(0.5, 0.5, total_comments_text, horizontalalignment='left', verticalalignment='center', fontsize=16, color='black', transform=ax.transAxes)
+        ax.axis('off')
+        plt.tight_layout()      
         
         # PLOT 3 BUFFER ---------------------
         buf3 = io.BytesIO()
@@ -99,6 +116,6 @@ def search_analysis(request):
         string3 = base64.b64encode(buf3.read())
         uri3 = urllib.parse.quote(string3)        
         
-        return render(request, 'search_results.html', {'data1': uri1, 'data2': uri2, 'data3': uri3})
+        return render(request, 'search_results.html', {'data1': uri1, 'data2': uri2, 'data2a': uri2a, 'data3': uri3})
 
     return render(request, 'search_results.html')

@@ -4,9 +4,10 @@
     <button type="submit">Run Analysis</button>
 </form>
 
-{% if data1 and data2 and data3 %}
+{% if data1 and data2 and data2a and data3 %}
     <img src="data:image/png;base64,{{ data1 }}" alt="Analysis Result">
     <img src="data:image/png;base64,{{ data2 }}" alt="Analysis Result">
+    <img src="data:image/png;base64,{{ data2a }}" alt="Analysis Result">
     <img src="data:image/png;base64,{{ data3 }}" alt="Analysis Result">
 {% else %}
     <p>No data to display.</p>
