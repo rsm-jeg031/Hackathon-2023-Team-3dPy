@@ -1,0 +1,11 @@
+<form method="post" action="{% url 'search_analysis' %}">
+    {% csrf_token %}
+    <input type="text" name="search" placeholder="Enter search term">
+    <button type="submit">Run Analysis</button>
+</form>
+
+{% if data %}
+    <img src="data:image/png;base64,{{ data }}" alt="Analysis Result">
+{% else %}
+    <p>No data to display.</p>
+{% endif %}
