@@ -10,6 +10,10 @@ This repository contains the work of Team 3dPy, for the Sony PlayStation Hackath
 
 To conduct sentiment analysis of public posts and comments from various social media sites. This analysis centers around PlayStation-related content (games, posts, features, consoles, subscriptions, etc), providing insights into public sentiment and engagement. We use the natural language toolkit (NLTK) to perform sentiment analysis on the data. The results are then visualized using matplotlib and renders in our app.  
 
+### The App 📱
+
+![Sentiment Searcher App](./Visualizations/App%20Example.png)
+
 ### Data Collection 📊
 
 The data for this project was collected from the following sources:
